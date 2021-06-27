@@ -78,12 +78,10 @@ class CurlActivity: Activity() {
 			var r = Rect(margin, margin, width - margin, height - margin)
 
 			var imageWidth = r.width() - (border * 2)
-			var imageHeight = imageWidth * d.getIntrinsicHeight()
-					/ d.getIntrinsicWidth()
+			var imageHeight = imageWidth * d.getIntrinsicHeight() / d.getIntrinsicWidth()
 			if (imageHeight > r.height() - (border * 2)) {
 				imageHeight = r.height() - (border * 2)
-				imageWidth = imageHeight * d.getIntrinsicWidth()
-						/ d.getIntrinsicHeight()
+				imageWidth = imageHeight * d.getIntrinsicWidth() / d.getIntrinsicHeight()
 			}
 
 			r.left += ((r.width() - imageWidth) / 2) - border
